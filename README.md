@@ -24,14 +24,17 @@
 
 By default server starts at http://localhost:8080
 
+To fetch a list of all movies in db.json file:
 ```
-***GET*** localhost:8080/api/v1/movies   
+GET localhost:8080/api/v1/movies   
 ```
 
+To get movie by id:
 ```
 GET localhost:8080/api/v1/movies/:id 
 ```
 
+To create new movie:
 ```
 POST localhost:8080/api/v1/movies
 {
@@ -44,18 +47,51 @@ POST localhost:8080/api/v1/movies
 }
 ```
 
+The route / api / v1 / random allows you to use two query paramters:
+- **genres** - list of defined genres e.g *genres=Fantasy,Drama* or *genres=Comedy*, the list of defined genres is at the bottom
+- **duration** - number , narrows the results by this number, this number relates to the length of the movie.   *duration=90* or *duration=43*
+
+To get single random movie:
 ```
 GET localhost:8080/api/v1/random
 ```
 
+To get movies with specific genres:
 ```
 GET localhost:8080/api/v1/random?genres=Fantasy
 ```
 
+To get single random movie with a runtime between duration +/- 10.
 ```
 GET localhost:8080/api/v1/random?duration=90
 ```
 
+To get movies with specific genres and runtime between duration +/- 10
 ```
 GET localhost:8080/api/v1/random?duration=90&genres=Fantasy,Drama
 ```
+
+
+
+Defined list of genres: 
+- Comedy
+- Fantasy
+- Crime
+- Drama
+- Music
+- Adventure
+- History
+- Thriller
+- Animation
+- Family
+- Mystery
+- Biography
+- Action
+- Film-Noir
+- Romance
+- Sci-Fi
+- War
+- Western
+- Horror
+- Musical
+- Sport
