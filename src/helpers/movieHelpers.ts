@@ -20,7 +20,7 @@ export const singleRandomMovieWithDuration = async (duration: number, movies: Mo
         <Movie[]>movies.filter((movie) => isBetweenPlusMinusValue(duration, Number(movie.runtime), 10)),
     );
 
-const isBetweenPlusMinusValue = (duration: number, runtime: number, value: number) =>
+export const isBetweenPlusMinusValue = (duration: number, runtime: number, value: number) =>
     runtime + value >= duration && runtime - value <= duration;
 
 export const selectRandomValueFromArray = <T>(array: T[]): T => array[Math.floor(Math.random() * array.length)];
@@ -44,7 +44,7 @@ export const rankByGenres = (movies: Movie[], genres: string[]): Movie[] => <Mov
             return m;
         });
 
-export const sanitizeGenres = (genres: string): string[] => {
+export const sanitizeGenres = (genres?: string): string[] => {
     if (!genres) {
         return [];
     }

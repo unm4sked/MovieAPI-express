@@ -23,7 +23,7 @@ export const getMovieById = async (id: number): Promise<Movie> => {
     return movie;
 };
 
-export const getRandomMovie = async (genres: string, duration: string): Promise<Movie | Movie[]> => {
+export const getRandomMovie = async (genres?: string, duration?: string): Promise<Movie | Movie[]> => {
     const data = await readDataFromFile();
     const movies = data.movies;
 

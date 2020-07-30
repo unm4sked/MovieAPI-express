@@ -10,9 +10,7 @@ interface IGenresParamsError {
     location: string;
 }
 
-const validateGenres = (genres: string[]): IGenresParamsError | null => {
-    const definedGenres = db.genres;
-
+export const validateGenres = (genres: string[], definedGenres: string[]): IGenresParamsError | null => {
     let error = null;
 
     genres.forEach((x) => {
@@ -30,8 +28,9 @@ const validateGenres = (genres: string[]): IGenresParamsError | null => {
 };
 
 export const validateInputData = (req: Request, res: Response): Response | void => {
+    const definedGenres = db.genres;
     const errors = validationResult(req);
-    const genresValidator = validateGenres(req.body.genres);
+    const genresValidator = validateGenres(req.body.genres, definedGenres);
 
     if (!errors.isEmpty() || genresValidator) {
         const arrayOfErrors = [...errors.array(), genresValidator].filter((x) => x);
@@ -47,7 +46,7 @@ export const validate = [
     check('director').isLength({ min: 1, max: 255 }).withMessage('Director must be provided'),
 ];
 
-export const validateNumberParamter = (duration: string): void => {
+export const validateNumberParamter = (duration?: string): void => {
     const durationNumber = Number(duration);
 
     if (isNaN(durationNumber)) {
