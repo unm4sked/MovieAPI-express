@@ -47,6 +47,9 @@ export const validate = [
 ];
 
 export const validateNumberParamter = (duration?: string): void => {
+    if (!duration) {
+        return;
+    }
     const durationNumber = Number(duration);
 
     if (isNaN(durationNumber)) {

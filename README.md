@@ -20,6 +20,7 @@
 
 -   install dependencies using command in project directory **_npm install_** / **_yarn_**
 -   run api using command **_npm run start_** / **_yarn start_**
+-   to run tests use **npm run test** / **yarn test** script
 
 ## How to use it?
 
@@ -46,8 +47,8 @@ POST localhost:8080/api/v1/movies
     "title": "How to catch someone on something",
     "year": "2019",
     "runtime": "90",
-    "director": "Lukas Kalickis"
-    "actors": "Lukas Kalickis",
+    "director": "Lukas Kalickis",
+    "actors": "Lukas Kalickis"
 }
 ```
 
