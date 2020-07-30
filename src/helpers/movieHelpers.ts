@@ -1,5 +1,6 @@
 import { Movie } from '../models/movie';
 import { readDataFromFile } from '../services/fileService';
+import _ from 'lodash';
 
 export const returnListOfMovieForDefinedGenresAndDuration = async (
     genres: string[],
@@ -49,5 +50,5 @@ export const sanitizeGenres = (genres?: string): string[] => {
         return [];
     }
 
-    return [...genres.split(',')].flat(Infinity).filter((x) => x);
+    return _.flattenDeep([...genres.split(',')]).filter((x) => x);
 };
