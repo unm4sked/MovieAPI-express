@@ -19,7 +19,7 @@ app.use(
         format: winston.format.combine(winston.format.colorize(), winston.format.json()),
     }),
 );
-app.use('/', moviesRouter);
+app.use('/api/v1/', moviesRouter);
 app.use(
     expressWinston.errorLogger({
         transports: [new winston.transports.Console()],

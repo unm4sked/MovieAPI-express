@@ -7,7 +7,7 @@ export class Movie {
     year: string;
     runtime: string;
     director: string;
-    actors: string;
+    actors?: string;
     plot?: string;
     posterUrl?: string;
 
@@ -39,7 +39,7 @@ export interface IMovie {
     year: string;
     runtime: string;
     director: string;
-    actors: string;
+    actors?: string;
     plot?: string;
     posterUrl?: string;
 }

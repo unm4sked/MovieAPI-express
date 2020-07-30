@@ -20,4 +20,42 @@
 - run api using command ***npm run start*** / ***yarn start***
 
 
-## How to uses ?
+## How to use it?
+
+By default server starts at http://localhost:8080
+
+```
+GET localhost:8080/api/v1/movies   
+```
+
+```
+GET localhost:8080/api/v1/movies/:id 
+```
+
+```
+POST localhost:8080/api/v1/movies
+{
+    "genres": ["Comedy","Drama"],
+    "title": "How to catch someone on something",
+    "year": "2019",
+    "runtime": "90",
+    "director": "Lukas Kalickis"
+    "actors": "Lukas Kalickis",
+}
+```
+
+```
+GET localhost:8080/api/v1/random
+```
+
+```
+GET localhost:8080/api/v1/random?genres=Fantasy
+```
+
+```
+GET localhost:8080/api/v1/random?duration=90
+```
+
+```
+GET localhost:8080/api/v1/random?duration=90&genres=Fantasy,Drama
+```
