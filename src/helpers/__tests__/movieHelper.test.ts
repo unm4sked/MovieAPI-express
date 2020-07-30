@@ -9,7 +9,6 @@ describe('Helpers functions', () => {
         expect(genresArray).toBeTruthy();
         expect(genresArray).toContain('Sport');
         expect(genresArray).toContain('Comedy');
-        expect(genresArray).not.toContain('');
     });
 
     test('isBetweenPlusMinusValue function should be logically correct', () => {
