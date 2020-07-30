@@ -47,7 +47,7 @@ POST localhost:8080/api/v1/movies
 }
 ```
 
-The route / api / v1 / random allows you to use two query paramters:
+The route ```/api/v1/``` random allows you to use two query paramters:
 - **genres** - list of defined genres e.g *genres=Fantasy,Drama* or *genres=Comedy*, the list of defined genres is at the bottom
 - **duration** - number , narrows the results by this number, this number relates to the length of the movie.   *duration=90* or *duration=43*
 
