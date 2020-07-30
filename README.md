@@ -16,8 +16,8 @@
 
 ## How to run?
 
-- install dependencies using command in project directory *npm install* / *yarn*
-- run api using command *npm run start* / *yarn start*
+- install dependencies using command in project directory ***npm install*** / ***yarn***
+- run api using command ***npm run start*** / ***yarn start***
 
 
 ## How to uses ?
