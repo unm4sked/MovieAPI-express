@@ -25,7 +25,7 @@
 By default server starts at http://localhost:8080
 
 ```
-GET localhost:8080/api/v1/movies   
+***GET*** localhost:8080/api/v1/movies   
 ```
 
 ```
