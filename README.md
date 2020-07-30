@@ -1,4 +1,4 @@
-# Typescript Express Node Boilerplate
+# Movie API
 
 ## Technologies used:
 
