@@ -39,7 +39,7 @@
         "express": "^4.17.1",
         "express-validator": "^6.6.0",
         "express-winston": "^4.0.5",
-        "lodash": "^4.17.19",
+        "lodash": "^4.17.21",
         "winston": "^3.3.3"
     },
     "husky": {
